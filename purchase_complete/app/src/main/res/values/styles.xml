@@ -9,7 +9,7 @@
 
     <!--인트로 테마-->
     <style name="IntroTheme" parent = "@android:style/Theme.Light.NoTitleBar">
-        <item name = "android:windowBackground">@drawable/background_intro</item>
+        <item name = "android:windowBackground">@drawable/intro_background</item>
     </style>
 
 
