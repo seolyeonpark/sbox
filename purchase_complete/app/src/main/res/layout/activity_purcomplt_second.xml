@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".purcomplt_SecondActivity"
+    android:orientation="vertical"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="#2A4D36">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="@drawable/ic_launcher_background"
+        android:layout_marginBottom="130dp"
+        />
+
+    <TextView
+        android:id="@+id/user_id"
+        android:textColorHint="#999999"
+        android:textColor="#999999"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:hint="이름: "
+        />
+
+    <TextView
+        android:id="@+id/user_price"
+        android:textColorHint="#999999"
+        android:textColor="#999999"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:hint="가격: "
+        />
+
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    tools:context=".MyPage">
+
+    //찐 마이페이지
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="마이페이지"
+        android:textAlignment="center"
+        android:textColorHint="#000000"
+        android:textSize="40sp" />
+    //내용 레이아웃
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="100dp">
+
+        //사용자 정보 표시 박선주 부분
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="#F1F1F1">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/user_ic"
+                    android:layout_width="100dp"
+                    android:layout_height="1000dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginTop="6dp"
+                    android:src="@color/cardview_dark_background"></ImageView>
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_toRightOf="@+id/user_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:text="로그인된 유저 이름"
+                    android:textColor="#111111"
+                    android:textSize="20sp"></TextView> //string
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 님"
+                    android:layout_marginTop="15sp"
+                    android:textColor="#111111"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@+id/user_name">
+                </TextView>
+                <TextView
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:layout_alignParentBottom="true"
+                    android:padding="10dp"
+                    android:text="로그아웃">
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/btn_setting"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/logout"
+                    android:onClick="btn_setting"
+                    android:src="@color/cardview_light_background" />
+            </RelativeLayout>
+        </FrameLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:text="구매 신청한 물품"
+            android:textSize="20sp"></Button>
+
+        // 여기에 들어가면 랜덤 비밀번호 뜨게 해야함
+
+        <Button
+            android:id="@+id/btn_pc"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:onClick="onClick"
+            android:text="구매 완료된 물품\n(입금 완료)"
+            android:textSize="18sp"></Button>
+
+        <Button
+            android:id="@+id/btn_s"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:text="판매 완료한 물품"
+            android:textSize="20sp"></Button>
+
+        <Button
+            android:id="@+id/btn_q"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:onClick="onClick"
+            android:text="FAQ/고객센터"
+            android:textSize="20sp"></Button>
+    </LinearLayout>
+
+</LinearLayout>
