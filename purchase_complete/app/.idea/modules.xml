@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app.iml" group="purchase_complete/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1343315623/purchase_complete.iml" filepath="$PROJECT_DIR$/.idea/modules/1343315623/purchase_complete.iml" group="purchase_complete" />
-    </modules>
-  </component>
-</project>
