@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="top"
+    tools:context=".Frag5">
+
+    //찐 마이페이지
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/soon1"></ImageView>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="마이페이지"></TextView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        android:background="#D3D0D0"
+        ></View>
+
+    //내용 레이아웃
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="100dp">
+
+        //사용자 정보 표시 박선주 부분
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_background">//네임카드<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp">//이미지, 이름, 학번 자율 정렬
+                    <ImageView
+                        android:id="@+id/profile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_weight="1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_toRightOf="@+id/profile"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="홍길동"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"></TextView>
+                        <TextView
+                            android:id="@+id/user_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/user_name"
+                            android:layout_marginTop="8dp"
+                            android:text="20191500"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"></TextView>
+                     </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                </LinearLayout>//작은 화면에서 맞닫지 않게함
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom">
+                    <TextView
+                        android:id="@+id/textviewUserEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="12dp"
+                        android:layout_gravity="bottom"
+                        android:text="email"
+                        android:textSize="10sp"></TextView>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">//양쪽정렬로 만들어줌
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/buttonLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_background"
+                        android:text="로그아웃  "></Button>
+                </LinearLayout>
+        </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btn_order"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:text="구매자 메뉴"
+            android:textColor="@color/Dark"
+            android:background="@drawable/btn_shape"
+            android:textSize="20sp"></Button>
+
+
+
+
+        <Button
+            android:id="@+id/btn_seller"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:text="판매자 메뉴"
+            android:textColor="@color/Dark"
+            android:background="@drawable/btn_shape"
+            android:textSize="20sp"></Button>
+        // 여기에 들어가면 랜덤 비밀번호 뜨게 해야함
+
+        <Button
+            android:id="@+id/btn_q"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
+            android:onClick="onClick"
+            android:text="FAQ/고객센터"
+            android:textColor="@color/Dark"
+            android:background="@drawable/btn_shape"
+            android:textSize="20sp"></Button>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textviewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="회원탈퇴 합니다."
+        android:textColor="@color/Dark" />
+
+</LinearLayout>
